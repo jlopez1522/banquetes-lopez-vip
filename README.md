@@ -33,7 +33,7 @@ npx playwright install chromium
 
 ## Configuración
 
-Copia `.env.example` como `.env.local` y define `NEXT_PUBLIC_SITE_URL` con el dominio final para publicar la URL canónica correcta. No agregues secretos a variables con prefijo `NEXT_PUBLIC_`.
+Copia `.env.example` como `.env.local` y define `NEXT_PUBLIC_SITE_URL` con el dominio final para publicar la URL canónica correcta. En Vercel puedes omitir esta variable para usar automáticamente el dominio de producción; evita crearla con un valor vacío. No agregues secretos a variables con prefijo `NEXT_PUBLIC_`.
 
 ## Contenido
 

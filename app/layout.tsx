@@ -14,14 +14,36 @@ const montserrat = Montserrat({
   variable: "--font-sans",
 });
 
-const publicSiteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+function resolveSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const vercelHost =
+    process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim() ||
+    process.env.VERCEL_URL?.trim();
+  const candidates = [
+    configuredUrl,
+    vercelHost
+      ? vercelHost.includes("://")
+        ? vercelHost
+        : `https://${vercelHost}`
+      : undefined,
+    "http://localhost:3000",
+  ];
+
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+
+    try {
+      return new URL(candidate);
+    } catch {
+      // Continue to the provider URL or the local development fallback.
+    }
+  }
+
+  return new URL("http://localhost:3000");
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL(publicSiteUrl),
+  metadataBase: resolveSiteUrl(),
   applicationName: "Banquetes López V.I.P.",
   title: {
     default: "Banquetes López V.I.P. | Casa de banquetes en Bogotá",

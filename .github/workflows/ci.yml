@@ -19,5 +19,8 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run lint
       - run: npm run typecheck
-      - run: npm run build
+      - name: Build with an empty optional site URL
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ""
       - run: npm test
