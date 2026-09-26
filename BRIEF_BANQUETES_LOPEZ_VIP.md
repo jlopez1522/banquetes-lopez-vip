@@ -1,82 +1,114 @@
-# Banquetes López V.I.P. — brief y guía para Visual Studio Code
+# Banquetes López V.I.P. - brief y guía del proyecto
 
-**Fecha de investigación:** 25 de septiembre de 2026.  
-**Proyecto:** página de presentación en Next.js (App Router), React, TypeScript y CSS adaptable.  
-**Objetivo:** mostrar la marca y facilitar el contacto por su perfil oficial de Instagram.
+**Última actualización:** 25 de septiembre de 2026.
+
+**Proyecto:** sitio web en Next.js, React, TypeScript, Three.js y CSS adaptable.
+
+**Objetivo:** presentar los servicios, mostrar trabajos realizados y facilitar la cotización de eventos.
 
 ## 1. Información de la marca
 
-| Dato | Contenido disponible | Estado |
-| --- | --- | --- |
-| Nombre | Banquetes López V.I.P. | Aportado por la solicitante |
-| Usuario | [@banquetes_lopez_vip](https://www.instagram.com/banquetes_lopez_vip/) | Enlace aportado |
-| Categoría | Planificador de eventos | Aportado |
-| Mensaje | «No realizamos eventos, cumplimos sueños ✨ Vive con nosotros una experiencia única en los momentos más especiales de tu vida 🥂 Realizamos tu evento.» | Adaptado del texto aportado; se corrigió «tú» por «tu» |
-| Dirección | Av. Esperanza, calle 24 #82-05, Bogotá, Colombia | Aportada; verificar escritura exacta antes de publicidad impresa |
-| Actividad de Instagram | 41 publicaciones, 223 seguidores, 72 seguidos | Captura textual aportada; cifras variables, no se muestran en la web |
+| Dato | Información publicada |
+| --- | --- |
+| Nombre | Banquetes López V.I.P. |
+| Actividad | Organización y logística integral de eventos sociales y empresariales |
+| Experiencia | Más de 10 años, dato aportado directamente por el responsable del proyecto |
+| Mensaje | «No realizamos eventos, cumplimos sueños» |
+| Cobertura | Bogotá y sus alrededores |
+| Instagram | [@banquetes_lopez_vip](https://www.instagram.com/banquetes_lopez_vip/) |
+| Facebook | [Banquetes López VIP](https://www.facebook.com/BanqueteslopezVip/) |
 
-## 2. Investigación de presencia pública
+## 2. Contacto y ubicación
 
-- **Instagram:** [perfil aportado](https://www.instagram.com/banquetes_lopez_vip/). La consulta automatizada no permitió revisar individualmente publicaciones, reels, comentarios o imágenes; el contenido de la biografía procede de la información suministrada.
-- **Video potencialmente relacionado:** [«CASA DE BANQUETES V.I.P. LOPEZ» en YouTube](https://www.youtube.com/watch?v=xIRLcWvp45I), descrito en el resultado público como una casa de banquetes en Bogotá, Modelia y Salitre. No se pudo confirmar que pertenezca al mismo negocio ni reutilizar su material; se deja para comprobación manual.
-- **Otro negocio con nombre similar:** [Casa de Banquetes López CBL](https://casadebanqueteslopez.com/) publica otra dirección, Carrera 103D #86-35, otro contacto y testimonios propios. **No se atribuyen sus reseñas, servicios, fotos ni trayectoria a Banquetes López V.I.P.**
-- No se localizaron reseñas independientes verificables ni una galería de imágenes o videos reutilizables atribuibles con certeza al perfil indicado. No se deben inventar testimonios, valoraciones, precios, paquetes ni cifras de experiencia.
+- **Dirección:** Carrera 103D #86-35, barrio Bolivia, localidad de Engativá, Bogotá D.C., Colombia.
+- **Google Maps:** [pin publicado como Banquetes López](https://www.google.com/maps/place/Banquetes+L%C3%B3pez/@4.6692559,-74.1229193,17z), ubicado en el sector de Modelia/Av. La Esperanza.
+- **Teléfonos:** +57 310 295 3754 y +57 316 242 4641.
+- **Correo:** [eventosylogistica@casadebanqueteslopez.com](mailto:eventosylogistica@casadebanqueteslopez.com).
+- **Horario:** todos los días de 8:00 a. m. a 6:00 p. m.; se recomienda cita previa.
 
-## 3. Recursos visuales
+La dirección, el teléfono terminado en 4641, el correo y el horario también aparecen en la página pública de contacto de Casa de Banquetes López. El teléfono terminado en 3754 y la asociación de estos datos con la marca V.I.P. fueron confirmados directamente por el responsable del proyecto. El pin aportado se encuentra en un sector distinto de la oficina de Engativá; la web identifica ambos por separado hasta confirmar si corresponden a una sede y una oficina diferentes.
 
-La carpeta `recursos/` se creó dentro del proyecto, pero no venía con archivos accesibles en este entorno. Coloca allí las fotos, videos, logotipo y autorizaciones originales. La portada actual utiliza `public/hero-event.png`, una **imagen ilustrativa creada con IA**; no representa un evento real de Banquetes López V.I.P.
+## 3. Servicios
 
-Para sustituir la portada, exporta una foto propia horizontal (idealmente 1800 px de ancho o más), optimízala, guárdala como `public/hero-event.png` y revisa el contraste del título. Para una galería, selecciona imágenes autorizadas y añade pies de foto reales; para videos, utiliza archivos con permiso de publicación o enlaces oficiales confirmados. Conserva las fuentes y autorizaciones de cada imagen en `recursos/`.
+### Eventos sociales y empresariales
 
-## 4. Estructura implementada
+- Bodas.
+- Fiestas de quince años.
+- Primeras comuniones.
+- Bautizos.
+- Grados y celebraciones familiares.
+- Reuniones y eventos empresariales.
 
-1. Cabecera con nombre y navegación.
-2. Portada con lema, imagen ilustrativa y llamada a contactar por Instagram.
-3. Presentación de la marca, con lenguaje editorial sin afirmaciones comerciales no verificadas.
-4. Tres tarjetas para iniciar una conversación sobre el tipo de celebración, sin ofrecer paquetes cerrados.
-5. Enlace al perfil oficial para ver publicaciones y novedades.
-6. Contacto, dirección y enlace al mapa.
+### Catering y gastronomía
 
-El sitio es adaptable para móvil y escritorio, usa enlaces externos seguros, metadatos básicos y respeta la preferencia de movimiento reducido. No hay formulario que recoja datos personales ni integración de pagos.
+- Buffet y platos servidos.
+- Asados.
+- Pasabocas y postres.
+- Cócteles y bebidas.
+- Menús adaptados al formato de la celebración.
 
-## 5. Abrir y ejecutar en VS Code
+### Producción y ambientación
 
-Abre la carpeta `banquetes-lopez-vip` en Visual Studio Code. En una terminal del proyecto:
+- Decoración temática, flores, globos e iluminación.
+- Montaje de mesas y espacios.
+- Sonido y video.
+- Fotografía profesional.
+- Coordinación logística del evento.
+
+La disponibilidad, el alcance y el precio de cada servicio deben confirmarse mediante cotización. La web no publica paquetes cerrados ni tarifas no verificadas.
+
+## 4. Video institucional
+
+El video [«CASA DE BANQUETES V.I.P. LOPEZ»](https://www.youtube.com/watch?v=xIRLcWvp45I) continúa público en YouTube. Su disponibilidad y título fueron comprobados mediante la respuesta pública de YouTube oEmbed. Está integrado en la página mediante `youtube-nocookie.com`, con carga diferida y enlace a la publicación original.
+
+## 5. Recursos visuales
+
+La carpeta `recursos/` contiene capturas aportadas como referencia y `public/recursos/` contiene los recortes utilizados por la web. Las imágenes se sirven mediante `next/image` en WebP o AVIF según el navegador.
+
+Para la publicación definitiva se recomiendan fotografías originales, sin controles de Instagram, con al menos 1800 px de ancho para la portada y autorización de uso. Conserva los originales y permisos dentro del archivo administrativo del negocio.
+
+## 6. Estructura implementada
+
+1. Portada con propuesta de valor y CTA de cotización.
+2. Presentación de la empresa y experiencia.
+3. Proceso de consulta en tres pasos.
+4. Servicios sociales, gastronómicos, decorativos y técnicos.
+5. Video institucional.
+6. Galería de trabajos.
+7. Preguntas frecuentes.
+8. Mapa interactivo, dirección y horario.
+9. Teléfonos, correo, Instagram y Facebook.
+
+El sitio incluye metadatos sociales, datos estructurados de negocio local, sitemap, robots, manifest, cabeceras de seguridad y pruebas automáticas de escritorio y móvil.
+
+## 7. Desarrollo
 
 ```bash
-pnpm install
-pnpm dev
+npm ci
+npm run dev
 ```
 
-Abre la dirección local que muestre la terminal. Para compilar:
+Comprobaciones disponibles:
 
 ```bash
-pnpm build
+npm run lint
+npm run typecheck
+npm run build
+npm test
 ```
 
-El código principal está en `app/page.tsx`, el diseño en `app/globals.css`, los metadatos en `app/layout.tsx` y las imágenes públicas en `public/`. La configuración de publicación de este proyecto usa una capa compatible con la estructura de Next.js para el alojamiento; si se traslada a un proveedor Next.js convencional, revisa sus comandos y configuración de despliegue.
+Define `NEXT_PUBLIC_SITE_URL` con el dominio definitivo antes de publicar para generar la URL canónica correcta.
 
-## 6. Paquetes para desarrollo web con IA
+## 8. Información pendiente
 
-| Paquete | Uso previsto | Estado |
-| --- | --- | --- |
-| `next`, `react`, `react-dom`, `typescript` | Base de la web en Next.js | Instalados |
-| `lucide-react` | Iconos accesibles y consistentes | Instalado |
-| `ai` | SDK para futuras experiencias con IA (por ejemplo, un asistente de cotización) | Instalado, sin función activa |
-| `@ai-sdk/openai` | Conector opcional para un modelo de OpenAI en una ruta de servidor | Instalado, sin clave configurada |
-| `zod` | Validación de entradas si se agrega un formulario o asistente | Instalado |
+- Logotipo oficial y manual de marca.
+- Fotografías y videos originales con autorización de publicación.
+- Confirmación de cuáles líneas reciben WhatsApp.
+- Confirmación de la relación entre el pin de Maps en Modelia y la oficina de Engativá.
+- Paquetes, capacidades y condiciones comerciales aprobadas.
+- Testimonios auténticos con autorización y enlace a la fuente.
+- Política de tratamiento de datos si se incorpora un formulario.
 
-**Antes de activar IA:** definir el caso de uso, las preguntas permitidas, los datos reales del negocio y el tratamiento de información personal. Mantener cualquier clave API solo en variables de entorno del servidor; nunca incluirla en componentes del navegador. La web actual funciona sin claves y no promete una función de IA que aún no existe.
+## 9. Criterio editorial
 
-## 7. Información pendiente para ampliar la web
-
-- Logo oficial y manual de marca.
-- Fotos y videos propios en `recursos/` con autorización de uso.
-- Servicios exactos, cobertura geográfica, capacidad, menús y paquetes comerciales aprobados.
-- Número de WhatsApp o correo oficial, horarios y confirmación de la dirección.
-- Reseñas auténticas con autorización para publicarlas y enlace a la fuente.
-- Confirmación de si el video antiguo de YouTube está vinculado a esta empresa.
-
-## 8. Criterio editorial
-
-Conservar la promesa de marca, revisar cada dato con la empresa antes de publicarlo y reemplazar la imagen ilustrativa por fotografías reales cuando estén disponibles. Los enlaces a Instagram permiten consultar el material original directamente; no copiar imágenes, comentarios o reels de terceros sin permiso.
+No publicar precios, testimonios, capacidades o promesas comerciales sin aprobación. Mantener consistentes el nombre, la dirección y los canales oficiales en la web, Maps y redes sociales. Revisar periódicamente que el video, los enlaces y los horarios continúen vigentes.

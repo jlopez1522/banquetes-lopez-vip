@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -14,10 +14,55 @@ const montserrat = Montserrat({
   variable: "--font-sans",
 });
 
+const publicSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Banquetes Lopez V.I.P. | Casa de banquetes en Bogota",
+  metadataBase: new URL(publicSiteUrl),
+  applicationName: "Banquetes López V.I.P.",
+  title: {
+    default: "Banquetes López V.I.P. | Casa de banquetes en Bogotá",
+    template: "%s | Banquetes López V.I.P.",
+  },
   description:
-    "Banquetes Lopez V.I.P., casa de banquetes y planificacion de eventos en Bogota.",
+    "Banquetes López V.I.P.: organización integral, catering, decoración y producción de eventos sociales y empresariales en Bogotá.",
+  keywords: [
+    "casa de banquetes Bogotá",
+    "banquetes Bogotá",
+    "decoración de eventos",
+    "catering Bogotá",
+    "eventos empresariales Bogotá",
+    "eventos en Bogotá",
+    "Banquetes López V.I.P.",
+  ],
+  category: "events",
+  creator: "Banquetes López V.I.P.",
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    siteName: "Banquetes López V.I.P.",
+    title: "Banquetes López V.I.P. | Celebraciones en Bogotá",
+    description: "Organización integral, catering, decoración y producción para eventos sociales y empresariales.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Banquetes López V.I.P.",
+    description: "Organización integral de eventos sociales y empresariales en Bogotá.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: { canonical: "/" },
+  manifest: "/manifest.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#121011",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
