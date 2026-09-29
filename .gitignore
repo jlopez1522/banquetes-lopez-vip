@@ -17,3 +17,7 @@ debug.log
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
+
+# Original production material; the site uses optimized selections in public/galeria.
+recursos/WhatsApp Image*.jpeg
+recursos/WhatsApp Video*.mp4

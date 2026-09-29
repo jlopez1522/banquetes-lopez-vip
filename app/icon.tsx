@@ -13,14 +13,14 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#121011",
-          border: "3px solid #ecd49a",
-          color: "#ecd49a",
+          background: "#090909",
+          border: "3px solid #c78b24",
+          color: "#f1cf78",
           fontSize: 28,
           fontWeight: 700,
         }}
       >
-        BL
+        LV
       </div>
     ),
     size,

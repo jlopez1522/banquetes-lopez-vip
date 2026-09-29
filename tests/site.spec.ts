@@ -9,13 +9,16 @@ test("carga la experiencia principal sin errores", async ({ page }, testInfo) =>
 
   await page.goto("/", { waitUntil: "networkidle" });
 
-  await expect(page).toHaveTitle(/Banquetes López V\.I\.P\./);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Banquetes López");
+  await expect(page).toHaveTitle(/Eventos López VIP/);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Eventos López VIP");
   await expect(page.locator(".hero-image")).toBeVisible();
   await expect(page.locator(".hero-scene")).toHaveAttribute("data-webgl", "ready");
   await expect(page.getByRole("link", { name: "+57 316 242 4641" })).toHaveAttribute("href", "tel:+573162424641");
   await expect(page.getByTitle("CASA DE BANQUETES V.I.P. LOPEZ")).toHaveAttribute("loading", "lazy");
   await expect(page.getByTitle("Ubicación de Banquetes López en Google Maps")).toHaveAttribute("loading", "lazy");
+  await expect(page.getByRole("tab", { name: "Bodas" })).toHaveAttribute("aria-selected", "true");
+  await page.getByRole("tab", { name: "15 años" }).click();
+  await expect(page.getByRole("tabpanel")).toContainText("15 años");
 
   const horizontalOverflow = await page.evaluate(
     () => document.documentElement.scrollWidth - document.documentElement.clientWidth,

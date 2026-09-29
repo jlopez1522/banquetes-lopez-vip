@@ -1,6 +1,6 @@
-# Banquetes López V.I.P. - brief y guía del proyecto
+# Eventos López VIP - brief y guía del proyecto
 
-**Última actualización:** 25 de septiembre de 2026.
+**Última actualización:** 29 de septiembre de 2026.
 
 **Proyecto:** sitio web en Next.js, React, TypeScript, Three.js y CSS adaptable.
 
@@ -10,7 +10,7 @@
 
 | Dato | Información publicada |
 | --- | --- |
-| Nombre | Banquetes López V.I.P. |
+| Nombre de marca | Eventos López VIP |
 | Actividad | Organización y logística integral de eventos sociales y empresariales |
 | Experiencia | Más de 10 años, dato aportado directamente por el responsable del proyecto |
 | Mensaje | «No realizamos eventos, cumplimos sueños» |
@@ -55,6 +55,13 @@ La dirección, el teléfono terminado en 4641, el correo y el horario también a
 - Fotografía profesional.
 - Coordinación logística del evento.
 
+### Alquileres
+
+- Menaje: vajilla, cristalería, cubiertos, mesas y sillas.
+- Sonido y apoyo técnico.
+- Fotografía profesional.
+- Decoración temática y mobiliario.
+
 La disponibilidad, el alcance y el precio de cada servicio deben confirmarse mediante cotización. La web no publica paquetes cerrados ni tarifas no verificadas.
 
 ## 4. Video institucional
@@ -63,7 +70,9 @@ El video [«CASA DE BANQUETES V.I.P. LOPEZ»](https://www.youtube.com/watch?v=xI
 
 ## 5. Recursos visuales
 
-La carpeta `recursos/` contiene capturas aportadas como referencia y `public/recursos/` contiene los recortes utilizados por la web. Las imágenes se sirven mediante `next/image` en WebP o AVIF según el navegador.
+`logo.png` contiene el logotipo oficial y `branding.png` define la dirección visual: negro, marfil, dorado y rojo vino, con copas, destellos y líneas ornamentales. La implementación conserva estos originales como archivos fuente y usa la copia pública `public/marca/logo.png`.
+
+La carpeta `recursos/` contiene el material original aportado. La selección optimizada para la web está en `public/galeria/`, organizada en bodas, quince años, bautizos, primeras comuniones, grados y eventos empresariales. Las imágenes se sirven mediante `next/image` en WebP o AVIF según el navegador.
 
 Para la publicación definitiva se recomiendan fotografías originales, sin controles de Instagram, con al menos 1800 px de ancho para la portada y autorización de uso. Conserva los originales y permisos dentro del archivo administrativo del negocio.
 
@@ -73,11 +82,12 @@ Para la publicación definitiva se recomiendan fotografías originales, sin cont
 2. Presentación de la empresa y experiencia.
 3. Proceso de consulta en tres pasos.
 4. Servicios sociales, gastronómicos, decorativos y técnicos.
-5. Video institucional.
-6. Galería de trabajos.
-7. Preguntas frecuentes.
-8. Mapa interactivo, dirección y horario.
-9. Teléfonos, correo, Instagram y Facebook.
+5. Alquileres de menaje, sonido, fotografía y decoración temática.
+6. Video institucional.
+7. Galería navegable por seis tipos de evento.
+8. Preguntas frecuentes.
+9. Mapa interactivo, dirección y horario.
+10. Teléfonos, correo, Instagram y Facebook.
 
 El sitio incluye metadatos sociales, datos estructurados de negocio local, sitemap, robots, manifest, cabeceras de seguridad y pruebas automáticas de escritorio y móvil.
 
@@ -101,8 +111,8 @@ Define `NEXT_PUBLIC_SITE_URL` con el dominio definitivo antes de publicar para g
 
 ## 8. Información pendiente
 
-- Logotipo oficial y manual de marca.
-- Fotografías y videos originales con autorización de publicación.
+- Manual de marca formal con tipografías, variantes y usos mínimos del logotipo.
+- Confirmación de autorización de publicación para las fotografías seleccionadas.
 - Confirmación de cuáles líneas reciben WhatsApp.
 - Confirmación de la relación entre el pin de Maps en Modelia y la oficina de Engativá.
 - Paquetes, capacidades y condiciones comerciales aprobadas.

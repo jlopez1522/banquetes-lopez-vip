@@ -44,13 +44,13 @@ function resolveSiteUrl() {
 
 export const metadata: Metadata = {
   metadataBase: resolveSiteUrl(),
-  applicationName: "Banquetes López V.I.P.",
+  applicationName: "Eventos López VIP",
   title: {
-    default: "Banquetes López V.I.P. | Casa de banquetes en Bogotá",
-    template: "%s | Banquetes López V.I.P.",
+    default: "Eventos López VIP | Casa de banquetes en Bogotá",
+    template: "%s | Eventos López VIP",
   },
   description:
-    "Banquetes López V.I.P.: organización integral, catering, decoración y producción de eventos sociales y empresariales en Bogotá.",
+    "Eventos López VIP: bodas, quince años, bautizos, primeras comuniones, grados, eventos empresariales y alquileres en Bogotá.",
   keywords: [
     "casa de banquetes Bogotá",
     "banquetes Bogotá",
@@ -58,20 +58,20 @@ export const metadata: Metadata = {
     "catering Bogotá",
     "eventos empresariales Bogotá",
     "eventos en Bogotá",
-    "Banquetes López V.I.P.",
+    "Eventos López VIP",
   ],
   category: "events",
-  creator: "Banquetes López V.I.P.",
+  creator: "Eventos López VIP",
   openGraph: {
     type: "website",
     locale: "es_CO",
-    siteName: "Banquetes López V.I.P.",
-    title: "Banquetes López V.I.P. | Celebraciones en Bogotá",
+    siteName: "Eventos López VIP",
+    title: "Eventos López VIP | Celebraciones en Bogotá",
     description: "Organización integral, catering, decoración y producción para eventos sociales y empresariales.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Banquetes López V.I.P.",
+    title: "Eventos López VIP",
     description: "Organización integral de eventos sociales y empresariales en Bogotá.",
   },
   robots: {
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#121011",
+  themeColor: "#090909",
   colorScheme: "light",
 };
 

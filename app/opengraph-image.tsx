@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Banquetes López V.I.P. - celebraciones con identidad";
+export const alt = "Eventos López VIP - no realizamos eventos, cumplimos sueños";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,19 +16,19 @@ export default function OpenGraphImage() {
           alignItems: "center",
           justifyContent: "center",
           padding: 80,
-          background: "#121011",
+          background: "#090909",
           color: "white",
           textAlign: "center",
         }}
       >
-        <div style={{ color: "#ecd49a", fontSize: 24, letterSpacing: 8, textTransform: "uppercase" }}>
-          Casa de banquetes en Bogotá
+        <div style={{ color: "#f1cf78", fontSize: 24, letterSpacing: 8, textTransform: "uppercase" }}>
+          Recepciones y eventos
         </div>
         <div style={{ marginTop: 32, fontSize: 82, fontWeight: 700, lineHeight: 1 }}>
-          Banquetes López V.I.P.
+          Eventos López VIP
         </div>
-        <div style={{ marginTop: 28, color: "#ecd49a", fontSize: 32 }}>
-          Organización integral de eventos
+        <div style={{ marginTop: 28, color: "#f1cf78", fontSize: 32 }}>
+          No realizamos eventos, cumplimos sueños
         </div>
       </div>
     ),

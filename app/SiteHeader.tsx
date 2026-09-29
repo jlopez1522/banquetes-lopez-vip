@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarCheck, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function SiteHeader() {
@@ -18,12 +19,16 @@ export default function SiteHeader() {
 
   return (
     <header className={`site-header${scrolled || menuOpen ? " is-solid" : ""}`}>
-      <a className="brand" href="#inicio" aria-label="Banquetes López V.I.P." onClick={closeMenu}>
-        <span className="brand-mark" aria-hidden="true">BL</span>
-        <span>
-          <strong>Banquetes López</strong>
-          <small>V.I.P.</small>
-        </span>
+      <a className="brand" href="#inicio" aria-label="Eventos López VIP" onClick={closeMenu}>
+        <Image
+          className="brand-logo"
+          src="/marca/logo-integrado.png"
+          alt=""
+          width={180}
+          height={120}
+          priority
+        />
+        <span className="brand-name">Eventos López VIP</span>
       </a>
 
       <button
@@ -40,6 +45,7 @@ export default function SiteHeader() {
       <nav id="main-navigation" className={menuOpen ? "is-open" : ""} aria-label="Navegación principal">
         <a href="#nosotros" onClick={closeMenu}>Nosotros</a>
         <a href="#servicios" onClick={closeMenu}>Servicios</a>
+        <a href="#alquileres" onClick={closeMenu}>Alquileres</a>
         <a href="#galeria" onClick={closeMenu}>Galería</a>
         <a href="#ubicacion" onClick={closeMenu}>Ubicación</a>
         <a

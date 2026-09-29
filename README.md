@@ -1,10 +1,10 @@
-# Banquetes López V.I.P.
+# Eventos López VIP
 
-Sitio de presentación para una casa de banquetes en Bogotá. Está construido con Next.js App Router, React, TypeScript, Three.js y CSS adaptable.
+Sitio de presentación para Eventos López VIP en Bogotá. Está construido con Next.js App Router, React, TypeScript, Three.js y CSS adaptable.
 
 ## Requisitos
 
-- Node.js 20.9 o superior
+- Node.js 22
 - npm 11
 
 ## Desarrollo

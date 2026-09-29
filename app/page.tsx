@@ -2,6 +2,7 @@ import {
   AudioLines,
   Building2,
   CalendarCheck,
+  Camera,
   Clock3,
   Mail,
   MapPin,
@@ -13,6 +14,7 @@ import {
   Utensils,
 } from "lucide-react";
 import Image from "next/image";
+import EventGallery from "./EventGallery";
 import HeroScene from "./HeroScene";
 import SiteHeader from "./SiteHeader";
 
@@ -31,18 +33,27 @@ const phones = [
 ];
 
 const detailImages = [
-  { file: "/recursos/galeria-banquete.png", alt: "Selección de pasabocas para una celebración" },
-  { file: "/recursos/galeria-boda.png", alt: "Mesa principal decorada para una boda" },
-  { file: "/recursos/galeria-decoracion.png", alt: "Montaje floral e iluminación para ceremonia" },
-  { file: "/recursos/galeria-globos.png", alt: "Ambientación temática con globos" },
+  { file: "/galeria/bodas-2.jpg", alt: "Recepción de boda preparada para los invitados" },
+  { file: "/galeria/quince-2.jpg", alt: "Decoración para una fiesta de quince años" },
+  { file: "/galeria/bautizos-1.jpg", alt: "Montaje temático para un bautizo" },
+  { file: "/galeria/empresariales-1.jpg", alt: "Montaje para un evento empresarial" },
+];
+
+const eventHighlights = [
+  { file: "/momentos/boda.jpg", label: "Bodas", alt: "Montaje de recepción para una boda", featured: true },
+  { file: "/momentos/quince.jpg", label: "15 años", alt: "Salón preparado para fiesta de quince años" },
+  { file: "/momentos/bautizo-v2.jpg", label: "Bautizos", alt: "Decoración temática preparada para un bautizo" },
+  { file: "/momentos/comunion-v2.jpg", label: "Primera comunión", alt: "Entrada de iglesia decorada para una ceremonia", featured: true },
+  { file: "/momentos/grado-v2.jpg", label: "Grados", alt: "Entrada con alfombra roja para una celebración de grado" },
+  { file: "/momentos/empresarial.jpg", label: "Empresariales", alt: "Salón iluminado para un evento empresarial", featured: true },
 ];
 
 const services = [
   {
     icon: PartyPopper,
-    title: "Eventos sociales",
+    title: "Eventos López VIP",
     eyebrow: "Momentos para celebrar",
-    image: "/recursos/galeria-boda.png",
+    image: "/galeria/bodas-3.jpg",
     alt: "Mesa principal y decoración para una celebración social",
     text: "Planeamos bodas, fiestas de quince años, primeras comuniones, bautizos, grados y reuniones familiares con una propuesta adaptada a cada ocasión.",
   },
@@ -58,7 +69,7 @@ const services = [
     icon: Sparkles,
     title: "Decoración y ambientación",
     eyebrow: "Diseño del espacio",
-    image: "/recursos/galeria-globos.png",
+    image: "/galeria/quince-3.jpg",
     alt: "Montaje temático con globos, luces y elementos decorativos",
     text: "Diseñamos fondos, arreglos, globos, flores, iluminación y montajes de acuerdo con la temática y el carácter de tu celebración.",
   },
@@ -66,25 +77,39 @@ const services = [
     icon: AudioLines,
     title: "Producción técnica",
     eyebrow: "Sonido e imagen",
-    image: "/recursos/galeria-luces.png",
+    image: "/galeria/empresariales-3.jpg",
     alt: "Salón preparado con iluminación y producción técnica",
     text: "Coordinamos soluciones de sonido, video, fotografía y apoyo técnico para acompañar los momentos principales del evento.",
   },
 ];
 
-const gallery = [
-  { file: "/recursos/galeria-salon.png", alt: "Salón con iluminación decorativa y mesas preparadas", className: "wide" },
-  { file: "/recursos/galeria-globos.png", alt: "Decoración temática en tonos dorados y verdes" },
-  { file: "/recursos/galeria-boda.png", alt: "Mesa de boda con flores y luces rosadas" },
-  { file: "/recursos/galeria-banquete.png", alt: "Pasabocas presentados para los invitados" },
-  { file: "/recursos/galeria-decoracion.png", alt: "Ceremonia exterior con flores rojas y blancas" },
-  { file: "/recursos/galeria-luces.png", alt: "Salón iluminado para una celebración", className: "wide" },
+const rentals = [
+  {
+    icon: Utensils,
+    title: "Menaje",
+    text: "Vajilla, cristalería, cubiertos, mesas, sillas y elementos para servir con una presentación impecable.",
+  },
+  {
+    icon: AudioLines,
+    title: "Sonido",
+    text: "Equipos y apoyo técnico para música, intervenciones, ceremonias y momentos especiales.",
+  },
+  {
+    icon: Camera,
+    title: "Fotografía",
+    text: "Registro profesional para conservar los detalles, las emociones y los momentos centrales de tu fecha.",
+  },
+  {
+    icon: Sparkles,
+    title: "Decoración temática",
+    text: "Fondos, mobiliario, iluminación, globos y composiciones adaptadas al concepto de la celebración.",
+  },
 ];
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Banquetes López V.I.P.",
+  name: "Eventos López VIP",
   description: "Organización integral, catering, decoración y producción de eventos en Bogotá y sus alrededores.",
   telephone: phones.map(({ label }) => label),
   email,
@@ -110,8 +135,8 @@ export default function Home() {
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <Image
             className="hero-image"
-            src="/recursos/hero-salon.png"
-            alt="Salón preparado con mesas e iluminación para una celebración"
+            src="/galeria/hero-eventos.jpg"
+            alt="Salón preparado por Eventos López VIP para una celebración"
             fill
             priority
             quality={82}
@@ -119,15 +144,15 @@ export default function Home() {
           />
           <HeroScene />
           <div className="hero-content">
-            <p className="hero-kicker">Eventos en Bogotá y sus alrededores</p>
-            <h1 id="hero-title">Banquetes López V.I.P.</h1>
-            <p className="hero-copy">No realizamos eventos, cumplimos sueños.</p>
+            <p className="hero-kicker">Recepciones y eventos · Bogotá</p>
+            <h1 id="hero-title">Eventos López VIP</h1>
+            <p className="hero-copy">No realizamos eventos.<strong>Cumplimos sueños.</strong></p>
             <a className="button ghost" href="#contacto">
               <MessageCircle size={18} aria-hidden="true" />
               Cotizar mi evento
             </a>
           </div>
-          <a className="scroll-cue" href="#nosotros" aria-label="Conocer Banquetes López V.I.P." />
+          <a className="scroll-cue" href="#nosotros" aria-label="Conocer Eventos López VIP" />
         </section>
 
         <section className="image-strip" aria-label="Detalles de celebraciones">
@@ -143,7 +168,7 @@ export default function Home() {
             <p className="eyebrow">Más de 10 años creando experiencias</p>
             <h2>Tu evento, con cada detalle coordinado</h2>
             <p>
-              <strong>Banquetes López V.I.P.</strong> es una empresa colombiana dedicada a
+              <strong>Eventos López VIP</strong> es una empresa colombiana dedicada a
               la organización y logística integral de celebraciones sociales y empresariales
               en Bogotá y sus alrededores.
             </p>
@@ -154,12 +179,27 @@ export default function Home() {
           </div>
           <figure className="portrait-media">
             <Image
-              src="/recursos/galeria-boda.png"
+              src="/galeria/bodas-2.jpg"
               alt="Detalle de una mesa principal decorada para boda"
               fill
               sizes="(max-width: 860px) 100vw, 300px"
             />
           </figure>
+        </section>
+
+        <section className="event-highlights" aria-labelledby="highlights-title">
+          <div className="event-highlights-heading">
+            <p className="eyebrow">Momentos con identidad</p>
+            <h2 id="highlights-title">Un vistazo a todo lo que celebramos</h2>
+          </div>
+          <div className="event-highlights-grid">
+            {eventHighlights.map(({ file, label, alt, featured }) => (
+              <figure className={featured ? "featured" : undefined} key={file}>
+                <Image src={file} alt={alt} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 40vw" />
+                <figcaption>{label}</figcaption>
+              </figure>
+            ))}
+          </div>
         </section>
 
         <section className="process" aria-labelledby="process-title">
@@ -206,10 +246,29 @@ export default function Home() {
           ))}
         </section>
 
+        <section className="rentals" id="alquileres" aria-labelledby="rentals-title">
+          <div className="rentals-heading">
+            <p className="eyebrow">También ofrecemos</p>
+            <h2 id="rentals-title">Alquileres para completar tu evento</h2>
+            <p>Contrata soluciones puntuales o intégralas dentro de una propuesta completa para tu celebración.</p>
+          </div>
+          <div className="rentals-list">
+            {rentals.map(({ icon: Icon, title, text }, index) => (
+              <article key={title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Icon aria-hidden="true" />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+          <a className="button rental-button" href="#contacto">Consultar disponibilidad</a>
+        </section>
+
         <section className="video-section" aria-labelledby="video-title">
           <div className="video-copy">
             <p className="eyebrow">Conoce nuestra historia</p>
-            <h2 id="video-title">Una mirada a Banquetes López V.I.P.</h2>
+            <h2 id="video-title">Una mirada a Eventos López VIP</h2>
             <p>Descubre parte de la experiencia, el montaje y el trabajo que acompaña cada celebración.</p>
             <a href={videoUrl} target="_blank" rel="noopener noreferrer">Ver directamente en YouTube</a>
           </div>
@@ -225,20 +284,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="gallery-section" id="galeria">
-          <div className="section-heading">
-            <p className="eyebrow">Portafolio</p>
-            <h2>Celebraciones que se recuerdan por sus detalles</h2>
-            <p>Ambientes, mesas y montajes para imaginar el tono de tu próxima fecha especial.</p>
-          </div>
-          <div className="gallery">
-            {gallery.map(({ file, alt, className }) => (
-              <figure key={file} className={className}>
-                <Image src={file} alt={alt} fill sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" />
-              </figure>
-            ))}
-          </div>
-        </section>
+        <EventGallery />
 
         <section className="faq" id="preguntas" aria-labelledby="faq-title">
           <div className="section-heading left">
@@ -252,7 +298,11 @@ export default function Home() {
             </details>
             <details>
               <summary>¿Qué tipo de eventos realizan?</summary>
-              <p>Bodas, quince años, primeras comuniones, bautizos, grados, reuniones familiares y eventos empresariales.</p>
+              <p>Bodas, quince años, bautizos, primeras comuniones, grados y eventos empresariales.</p>
+            </details>
+            <details>
+              <summary>¿Puedo contratar únicamente alquileres?</summary>
+              <p>Sí. Consulta disponibilidad para menaje, sonido, fotografía o decoración temática según la fecha y ubicación de tu evento.</p>
             </details>
             <details>
               <summary>¿En qué zonas prestan servicio?</summary>
@@ -340,7 +390,7 @@ export default function Home() {
 
       <footer>
         <div>
-          <strong>Banquetes López V.I.P.</strong>
+          <strong>Eventos López VIP</strong>
           <span>Organización y logística integral de eventos</span>
         </div>
         <a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram</a>
